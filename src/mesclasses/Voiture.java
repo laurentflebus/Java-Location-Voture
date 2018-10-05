@@ -1,20 +1,40 @@
 package mesclasses;
 public class Voiture {
-    private String num_chassis;
+    private String numChassis;
     private String immatriculation;
     private String couleur;
 
-    public Voiture(String num_chasis, String immatriculation, String couleur) {
-        this.num_chassis = num_chasis;
+    public Voiture(String numChasis, String immatriculation, String couleur) {
+        this.numChassis = numChasis;
         this.immatriculation = immatriculation;
         this.couleur = couleur;
+    }
+
+    public void setCouleur(String couleur) {
+        this.couleur = couleur;
+    }
+
+    public String getCouleur() {
+        return couleur;
+    }
+
+    public String getImmatriculation() {
+        return immatriculation;
+    }
+
+    public void setImmatriculation(String immatriculation) {
+        this.immatriculation = immatriculation;
+    }
+
+    public String getNumChassis() {
+        return numChassis;
+    }
+
+    public void setNumChassis(String numChassis) {
+        this.numChassis = numChassis;
     }
     
-    public void modifier(String num_chasis, String immatriculation, String couleur) {
-        this.num_chassis = num_chasis;
-        this.immatriculation = immatriculation;
-        this.couleur = couleur;
-    }
+    
     
     public void supprimer() {
         // supprimer en base de données
@@ -24,7 +44,7 @@ public class Voiture {
     
     @Override
     public String toString() {
-        return num_chassis + "\n" +
+        return numChassis + "\n" +
                immatriculation + "\n" +
                couleur + "\n";
     }
